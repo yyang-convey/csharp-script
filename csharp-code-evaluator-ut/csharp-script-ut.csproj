@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -38,6 +38,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dependencies\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="oracle.dataaccess, Version=4.112.4.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Oracle.DataAccess\v4.0_4.112.3.0__89b483f429c47342\oracle.dataaccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,9 +63,14 @@
     <Compile Include="..\src\ObjectAddress.cs">
       <Link>Src\ObjectAddress.cs</Link>
     </Compile>
+    <Compile Include="..\src\script\Module3.cs">
+      <Link>Src\script\Module3.cs</Link>
+    </Compile>
     <Compile Include="..\src\SovosExpandoObject.cs">
       <Link>Src\SovosExpandoObject.cs</Link>
     </Compile>
+    <Compile Include="Test\CSharpCodeModule3.cs" />
+    <Compile Include="Test\CSharpCodeOracleTest.cs" />
     <Compile Include="Test\CSharpCodeEvaluatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
